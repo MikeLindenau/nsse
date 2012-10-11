@@ -18,10 +18,7 @@ server = http.createServer(function (req, res){
 
 es = new ServerSent(server, { heartbeat: 1000*5 })
 
-first = es.of('/sse', { validate: function (req, next) {
-	// validate Request, auth, params and whatnot
-	next()
-}})
+first = es.of('/sse')
 
 first.on('connection', function (socket){
 	console.log('SOCKET', first.members)
