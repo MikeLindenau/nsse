@@ -8,7 +8,7 @@ tmpl  = require('fs').readFileSync(__dirname + '/index.html', 'utf8')
 server = http.createServer(function (req, res){
     res.setHeader('Content-Type','text/html')
 	res.end(tmpl)
-}).listen(process.env.PORT || 8080, function(){
+}).listen(process.env.PORT || 8080, process.env.IP, function(){
 	console.log('Server on', this.address().port)
 })
 
