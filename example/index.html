@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1> Server Sent Evetns</h1>
+
+<script type="text/javascript">
+var test = new EventSource('/sse')
+
+test.onmessage = function (event) {
+    var data = event.data.split('\n')
+	console.log(event, data)
+}
+
+test.addEventListener('test', function (ping){
+	console.log('TEST:', ping.data)
+})
+
+test.addEventListener('json', function (data){
+	console.log('JSON,', data)
+	console.log('DATA:', JSON.parse(data.data))
+})
+
+test.addEventListener('heartbeat', function (data){
+	console.log('heartbeat', data)
+	console.log('DATA:', data.data)
+})
+
+</script>
+</body>
+</html>
