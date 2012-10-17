@@ -13,10 +13,8 @@ server = http.createServer(function (req, res){
 })
 
 
-
-
-
 es = new ServerSent(server, { heartbeat: 1000*5 })
+
 
 first = es.of('/sse')
 
