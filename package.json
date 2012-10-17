@@ -1,7 +1,7 @@
 {
   "author": "Alejandro Morales <vamg008@gmail.com> (http://alejandromorales.co.cc)",
   "name": "nsse",
-  "description": "Server-Sent Events for Node",
+  "description": "Server-Sent Events for Node.js",
   "version": "0.0.0",
   "homepage": "http://github.com/alejandro/nsse",
   "repository": {
@@ -19,6 +19,6 @@
   },
   "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">= 0.8.x"
   }
 }

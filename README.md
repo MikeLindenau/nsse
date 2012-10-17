@@ -17,7 +17,7 @@ var ServerSent = require('nsse')
    , os = require('os')
 
 var server = http.createServer(function(req, res){
-    res.end('Server Sent Evetns')
+    res.end('Server Sent Events')
 })
 
 server.listen(8100)
@@ -54,7 +54,7 @@ Client:
 ```html
 <html>
 	<body>
-		<h1> Server Sent Evetns</h1>
+		<h1> Server Sent Events</h1>
 
 		<script type="text/javascript">
 		var source = new EventSource('/sse')
